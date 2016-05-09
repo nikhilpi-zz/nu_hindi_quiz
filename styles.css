@@ -93,10 +93,45 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+@font-face {
+    font-family: Urdu;
+    src: url(NotoNastaliqUrdu-Regular.ttf);
+}
 
+.wizard {
+    position: relative;
+}
 
 .wizard > .steps {
-    display: none;
+    position: absolute;  
+    bottom: 5px;
+    padding-left: 137px; 
+}
+
+.wizard > .steps .current a, .wizard > .steps .current a:hover, .wizard > .steps .current a:active {
+    border: 5px solid #e87749;
+    border-radius: 50%;
+    width: 2px;
+    height: 2px;
+    color: rgba(0,0,0,0);
+    background-color: rgba(0,0,0,0);
+    pointer-events: none;
+    cursor: default;
+}
+
+.wizard > .steps .done a, .wizard > .steps .done a:hover, .wizard > .steps .done a:active {
+    border: 5px solid #9dc8e2;
+    border-radius: 50%;
+    width: 2px;
+    height: 2px;
+    color: rgba(0,0,0,0);
+    pointer-events: none;
+    cursor: default;
+    background: #e87749;
+}
+
+.wizard > .steps > ul > li {
+    width: auto;
 }
 
 .wizard {
@@ -145,7 +180,7 @@ textarea {
     color: #ffffff;
     font-size: 1.5em;
     overflow: scroll;
-    font-family: 'Cabin', sans-serif;
+    font-family: Urdu, sans-serif;
 }
 
 .wizard > .content > .body .p {
