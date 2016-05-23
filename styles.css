@@ -148,9 +148,15 @@ h1.jumbo {
     margin-top: 35px;
 }
 
+.question-container {
+    overflow: scroll;
+    max-height: 440px;
+}
+
 p.question {
     font-size: 35px;
     margin-top: 50px;
+    padding-bottom: 10px;
 }
 
 .wizard > .content {
@@ -200,6 +206,7 @@ p.question {
     font-size: 1.5em;
     overflow: scroll;
     font-family: Urdu, sans-serif;
+    overflow: hidden;
 }
 
 .wizard > .content > .body .p {

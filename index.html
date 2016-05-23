@@ -39,6 +39,19 @@
           </div>
         </div>
       </script>
+
+      <script id="answer-template" type="text/x-handlebars-template">
+        <div class="row">
+          <div class="col-md-6">
+            {{#if header}}
+            <h1 class="jumbo">{{header}}</h1>
+            {{/if}}
+          </div>
+          <div class="col-md-6 question-container">
+            <p class="question">{{{text}}}<br>{{{hidden_text}}}</p>
+          </div>
+        </div>
+      </script>
       
     </body>
 </html>
