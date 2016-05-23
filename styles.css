@@ -100,69 +100,88 @@ textarea {
 
 .wizard {
     position: relative;
+    background-image: url("pattern_bg.png");
 }
 
 .wizard > .steps {
-    position: absolute;  
-    bottom: 5px;
-    padding-left: 137px; 
+    position: absolute;
+    top: 118px;
+    padding-left: 160px;
+    z-index: 100;
 }
 
 .wizard > .steps .current a, .wizard > .steps .current a:hover, .wizard > .steps .current a:active {
-    border: 5px solid #e87749;
+    border: 3px solid #FFFFFF;
     border-radius: 50%;
     width: 2px;
     height: 2px;
-    color: rgba(0,0,0,0);
-    background-color: rgba(0,0,0,0);
+    color: transparent;
+    background-color: transparent;
     pointer-events: none;
     cursor: default;
 }
 
 .wizard > .steps .done a, .wizard > .steps .done a:hover, .wizard > .steps .done a:active {
-    border: 5px solid #9dc8e2;
+    border: 3px solid #FFFFFF;
     border-radius: 50%;
     width: 2px;
     height: 2px;
-    color: rgba(0,0,0,0);
+    color: transparent;
+    background-color: #FFFFFF;
     pointer-events: none;
     cursor: default;
-    background: #e87749;
 }
 
 .wizard > .steps > ul > li {
     width: auto;
 }
 
-.wizard {
-    background-image: url("pattern_bg.jpg");
-    border: 10px solid #ae5234;
-    border-radius: 0px;
-    -webkit-box-shadow: 5px 5px 5px #aaa;
-    -moz-box-shadow:    5px 5px 5px #aaa;
-    box-shadow:         5px 5px 5px #aaa;
+.wizard > .steps > ul > li.first.current {
+    display: none;
+}
+
+h1.jumbo {
+    font-size: 90px;
+    font-family: Urdu, Arial, sans-serif;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 35px;
+}
+
+p.question {
+    font-size: 35px;
+    margin-top: 50px;
 }
 
 .wizard > .content {
-    margin: 2em 2em .5em 2em;
     border-radius: 0px;
-    background-color: rgba(0,0,0,.7);
-    min-height: 25em;
+    background-color: #BC692F;
+    margin: 0;
+    margin-top: 100px;
 }
 
 .wizard > .actions {
     text-align: left;
     padding: .5em .5em .5em 2em;
-}
-
-.wizard > .actions .disabled a, .wizard > .actions .disabled a:hover, .wizard > .actions .disabled a:active {
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 0px;
+    position: absolute;
+    top: 110px;
+    z-index: 200;
 }
 
 .wizard > .actions a, .wizard > .actions a:hover, .wizard > .actions a:active {
-    background: #e87749;
+    font-size: 30px;
+    padding: 0;
+    font-family: "Helvetica";
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
+.wizard > .actions .disabled a, .wizard > .actions .disabled a:hover, .wizard > .actions .disabled a:active {
+    display: none;
+}
+
+.wizard > .actions a, .wizard > .actions a:hover, .wizard > .actions a:active {
+    background: transparent;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 0px;
@@ -199,19 +218,28 @@ textarea {
     text-align: center;
 }
 
+.wizard > .content > .body .tri_button{
+    padding-top: 20px;
+}
+
+.wizard > .content > .body .tri_button .option_button{
+    font-size: 25px;
+}
+
 .wizard > .content > .body .option_button, .wizard > .content > .body .option_button:focus{
-    background: #e87749;
-    color: #fff;
-    padding: 0.5em 1em;
+    background: #ffffff;
+    color: #BC692F;
+    padding: .60em 3em;
+    text-transform: capitalize;
     text-decoration: none;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
-    border-radius: 0px;
     border: none;
     margin: .5em;
-    font-size: .75em;
+    font-size: 30px;
     outline: none;
 }
+
 
 
 /* ==========================================================================

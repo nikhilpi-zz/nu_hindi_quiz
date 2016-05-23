@@ -3,20 +3,23 @@ $(document).ready( function() {
     var add_next_step = function(tree) {
         wizard.steps("add", {
             title: "Hello!", 
-            content: format_content
+            content: format_content,
         });
     }
 
     var format_content = function() {
+        var source   = $("#yes-no-template").html();
+        var template = Handlebars.compile(source);
         var html = "";
+
         var tree = path[path.length-1];
 
         if (tree.text) {
             html += '<p class="text_blob">' + text_db[tree.text - 1] + '</p>';
         } else {
-            html += tree.header ? '<h3>' + tree.header + '</h3>' : '';
-            html += '<p class="question">' + tree.question + '</p>';
-            html += option_button_gen(tree.options,path.length-1);
+            var tb = Object.keys(tree.options || {}).length > 2;
+            var data = {header: tree.header, question: tree.question, tri_button: tb, buttons:option_button_gen(tree.options,path.length-1)};
+            html = template(data);
         }
         return html;
     }
@@ -74,7 +77,7 @@ $(document).ready( function() {
                         question: "Which of the following best describes your knowledge of spoken Hindi or Urdu?",
                         options: {
                             a: {
-                                btn_txt: "Option A: I can hold a limited conversation but have a limited vocabulary and struggle to understand when others speak.",
+                                btn_txt: "I can hold a limited conversation but have a limited vocabulary and struggle to understand when others speak.",
                                 question: "Great! Let me ask you this: do you know how to read the Nasta’liq ('Urdu') script?",
                                 options: {
                                     yes: {
@@ -94,7 +97,7 @@ $(document).ready( function() {
                                 }
                             },
                             b: {
-                                btn_txt: "Option B: I can engage in conversations on everyday topics, but occasionally I struggle to speak.",
+                                btn_txt: "I can engage in conversations on everyday topics, but occasionally I struggle to speak.",
                                 question: "Great! Next question: do you know how to read the Nasta’liq ('Urdu') script?",
                                 options: {
                                     yes: {
@@ -115,7 +118,7 @@ $(document).ready( function() {
                                 }
                             },
                             c: {
-                                btn_txt: "Option C: I can express myself well, but do not possess a broad vocabulary that would let me easily discuss a wide range of subjects.",
+                                btn_txt: "I can express myself well, but do not possess a broad vocabulary that would let me easily discuss a wide range of subjects.",
                                 question: "Bahut achhe! Do you know how to read the Devanagri ('Hindi') script?",
                                 options: {
                                     yes: {
@@ -215,6 +218,7 @@ $(document).ready( function() {
         labels: {
             cancel: "Cancel",
             current: "current step:",
+            previous: "← Back",
             finish: "",
         }
     };
