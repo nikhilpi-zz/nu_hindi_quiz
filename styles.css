@@ -98,6 +98,12 @@ textarea {
     src: url(NotoNastaliqUrdu-Regular.ttf);
 }
 
+@font-face {
+    font-family: Hindi;
+    src: url(NotoSansDevanagari-Regular.ttf);
+}
+
+
 .wizard {
     position: relative;
     background-image: url("pattern_bg.png");
@@ -141,7 +147,7 @@ textarea {
 }
 
 h1.jumbo {
-    font-size: 90px;
+    font-size: 80px;
     font-family: Urdu, Arial, sans-serif;
     font-weight: 700;
     text-align: center;
@@ -229,7 +235,7 @@ p.question {
     padding-top: 20px;
 }
 
-.wizard > .content > .body .tri_button .option_button{
+.wizard > .content > .body .tri_button .option_button, .wizard > .content > .body .tri_button .option_button:focus{
     font-size: 25px;
 }
 
@@ -245,6 +251,10 @@ p.question {
     margin: .5em;
     font-size: 30px;
     outline: none;
+}
+
+.hindi {
+    font-family: Hindi, sans-serif;
 }
 
 
