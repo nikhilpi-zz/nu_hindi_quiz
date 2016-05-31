@@ -23,7 +23,7 @@
         <div class="row">
           <div class="col-md-6">
             {{#if header}}
-            <h1 class="jumbo">{{header}}</h1>
+            <h1 class="jumbo {{#if urdu}}extra_text_spacing{{/if}}">{{header}}</h1>
             {{/if}}
             {{#if tri_button}}
               <div class="tri_button">
@@ -44,7 +44,14 @@
         <div class="row">
           <div class="col-md-6">
             {{#if header}}
-            <h1 class="jumbo">{{header}}</h1>
+              <h1 class="jumbo {{#if urdu}}extra_text_spacing{{/if}}">{{header}}</h1>
+            {{/if}}
+            {{#if images}}
+              {{#each images}}
+                <div class="col-md-6">
+                  <img src="{{this}}" class="img-responsive answer_img">
+                </div>
+              {{/each}}
             {{/if}}
           </div>
           <div class="col-md-6 question-container">

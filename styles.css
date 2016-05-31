@@ -237,12 +237,13 @@ p.question {
 
 .wizard > .content > .body .tri_button .option_button, .wizard > .content > .body .tri_button .option_button:focus{
     font-size: 25px;
+    text-transform: none;
 }
 
 .wizard > .content > .body .option_button, .wizard > .content > .body .option_button:focus{
     background: #ffffff;
     color: #BC692F;
-    padding: .60em 3em;
+    padding: .60em 2em;
     text-transform: capitalize;
     text-decoration: none;
     -webkit-border-radius: 5px;
@@ -257,6 +258,15 @@ p.question {
     font-family: Hindi, sans-serif;
 }
 
+h1.extra_text_spacing {
+    font-size: 55px;
+    line-height: 120px;
+}
+
+.answer_img {
+    padding-top: 30px;
+
+}
 
 
 /* ==========================================================================
