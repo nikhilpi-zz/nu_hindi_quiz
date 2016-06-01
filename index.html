@@ -21,7 +21,7 @@
 
       <script id="yes-no-template" type="text/x-handlebars-template">
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-sm-6">
             {{#if header}}
             <h1 class="jumbo {{#if urdu}}extra_text_spacing{{/if}}">{{header}}</h1>
             {{/if}}
@@ -31,7 +31,7 @@
               </div>
             {{/if}}
           </div>
-          <div class="col-md-6">
+          <div class="col-sm-6">
             <p class="question">{{question}}</p>
             {{#unless tri_button}}
               {{{buttons}}}
@@ -42,19 +42,19 @@
 
       <script id="answer-template" type="text/x-handlebars-template">
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-sm-6">
             {{#if header}}
               <h1 class="jumbo {{#if urdu}}extra_text_spacing{{/if}}">{{header}}</h1>
             {{/if}}
             {{#if images}}
               {{#each images}}
-                <div class="col-md-6">
+                <div class="col-sm-6">
                   <img src="{{this}}" class="img-responsive answer_img">
                 </div>
               {{/each}}
             {{/if}}
           </div>
-          <div class="col-md-6 question-container">
+          <div class="col-sm-6 question-container">
             <p class="question">{{{text}}}<br>{{{hidden_text}}}</p>
           </div>
         </div>
