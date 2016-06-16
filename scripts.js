@@ -170,7 +170,7 @@ $(document).ready( function() {
         
         //3
         {
-            header: 'دیا! उड़ा दिया!',
+            header: 'اڑا دیا! उड़ा दिया!',
             text: 'You have a strong knowledge of Hindi and Urdu and you can read and write them in both scripts. That makes you a perfect fit for our entire series of upper-level classes, or Hindi-Urdu IV: Advanced Topics in Hindi-Urdu (Hindi-Urdu 310). These classes are designed for native speakers and for the advanced language learners. The topics vary from quarter to quarter, so we\'re sure to have some offerings that will be of interest to you. Some of these topics include Hindi and Urdu literature, Indian and Pakistani Cinema and Television, and historical and regional focuses. To learn what topics are coming up next, or for more information, please send an email to our Hindi-Urdu language coordinator, Rami Nair at rnair@northwestern.edu. For questions related to advanced topics in Urdu literature, you can also write to Daniel Majchrowicz (dmaj@northwestern.edu), and for Hindi, write to Laura Brueck (laura.brueck@northwestern.edu.)'
         },
         
